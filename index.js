@@ -29,6 +29,12 @@ app.use(cors({
     allowedHeaders: ["Content-Type", "Authorization"],
 }))
 
+app.options("/user/create", (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    res.send();
+  });
 
 app.use("/",(req,res)=>{
     res.send("Succefully Done !");
