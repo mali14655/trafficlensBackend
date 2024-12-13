@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 dotenv.config();
 const app=express();
 const PORT=3000;
-const url=`mongodb+srv://mali146643:${process.env.PASSWORD}cluster0.jbbwg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+const url=`mongodb+srv://mali146643:${process.env.PASSWORD}@cluster0.jbbwg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 
 //Connection
 ConnectToMongoDb(url)
