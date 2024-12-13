@@ -21,7 +21,7 @@ const handleCreateUser=async(req,res)=>{
             websiteName:req.body.websiteName,
             clicks:[]
         })
-        res.json({url:`http://localhost:3000/user/visit/${id}`,msg:"Succesfully Created !"});
+        res.json({url:`https://trafficlens-backend.vercel.app/user/visit/${id}`,msg:"Succesfully Created !"});
     }
     catch(err){
         res.json({msg:"Error while creating !"})
