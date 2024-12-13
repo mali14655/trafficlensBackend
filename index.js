@@ -27,7 +27,7 @@ app.use(cors({
 }))
 
 
-app.get("/",(req,res)=>{
+app.use("/",(req,res)=>{
     res.send("Succefully Done !");
 })
 app.use("/user",userRouter);
