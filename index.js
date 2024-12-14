@@ -23,6 +23,8 @@ const url=`mongodb+srv://mali146643:${process.env.PASSWORD}@cluster0.jbbwg.mongo
 //middlewares
 app.use(express.json());
 app.use(cors());
+app.options('*', cors()); // Handle preflight requests globally
+
 
 app.use((req, res, next) => {
     console.log(`Request Method: ${req.method}, Path: ${req.path}`);
