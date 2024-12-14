@@ -22,7 +22,11 @@ const url=`mongodb+srv://mali146643:${process.env.PASSWORD}@cluster0.jbbwg.mongo
 
 //middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://trafficlens-frontend.vercel.app', // Your live frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow necessary HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
+}));
 app.options('*', cors()); // Handle preflight requests globally
 
 
