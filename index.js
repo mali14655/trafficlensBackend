@@ -31,17 +31,17 @@ app.use(cors({
     optionsSuccessStatus: 204, // For older browsers
 }))
 
-app.options("/user/create", (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "*");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-    res.send();
-  });
+app.use((req, res, next) => {
+    console.log(`Request Method: ${req.method}, Path: ${req.path}`);
+    next();
+});
+
+
+app.use("/user",userRouter);
 
 app.use("/",(req,res)=>{
     res.send("Succefully Done !");
 })
-app.use("/user",userRouter);
 
 
 
