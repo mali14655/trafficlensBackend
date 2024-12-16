@@ -6,7 +6,7 @@ import { handleCreateUser,handleVisitUser,handleAnalysisUser } from "../controll
 const userRouter=express.Router();
 
 //Routes
-userRouter.get('/create',(req,res)=>{
+userRouter.get('/creat',(req,res)=>{
     res.send("api calling correct")
 });
 userRouter.post('/create',handleCreateUser);
