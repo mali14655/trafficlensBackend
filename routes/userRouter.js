@@ -15,4 +15,4 @@ router.get('/visit/:id',handleVisitUser);
 router.get('/analysis/:websiteName',handleAnalysisUser);
 
 
-export {router};
+export default router;

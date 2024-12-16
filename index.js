@@ -1,9 +1,10 @@
 import express from "express"
 import { ConnectToMongoDb } from "./connect.js";
-import {router} from "./routes/userRouter.js"
+// import {router} from "./routes/userRouter.js"
 
 import cors from "cors";
 import dotenv from "dotenv";
+import router from "./routes/userRouter.js";
 
 
 dotenv.config();
