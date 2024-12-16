@@ -1,6 +1,5 @@
 import { UserModel } from "../models/User.js"
 import shortid from "shortid"
-import { userRouter } from "../routes/userRouter.js";
 
 
 const handleCreateUser=async(req,res)=>{

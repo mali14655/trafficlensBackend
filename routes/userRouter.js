@@ -1,5 +1,5 @@
 import express from "express";
-import { handleCreateUser,handleVisitUser,handleAnalysisUser } from "../controller/user";
+import { handleCreateUser,handleVisitUser,handleAnalysisUser } from "../controller/user.js";
 
 
 
