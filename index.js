@@ -1,6 +1,7 @@
 import express from "express"
 import { ConnectToMongoDb } from "./connect.js";
-import {userRouter} from "./routes/userRouter.js"
+import {router} from "./routes/userRouter.js"
+
 import cors from "cors";
 import dotenv from "dotenv";
 
@@ -29,7 +30,7 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use("/user",userRouter);
+app.use("/user",router);
 app.use("/",(req,res)=>{
     res.send("Succefully Done !");
 })

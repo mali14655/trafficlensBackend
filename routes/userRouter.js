@@ -1,17 +1,18 @@
-import express, { Router } from "express";
+import express from "express";
 import { handleCreateUser,handleVisitUser,handleAnalysisUser } from "../controller/user";
 
 
 
-const userRouter=express.Router();
+
+const router=express.Router();
 
 //Routes
-userRouter.get('/creat',(req,res)=>{
+router.get('/creat',(req,res)=>{
     res.send("api calling correct")
 });
-userRouter.post('/create',handleCreateUser);
-userRouter.get('/visit/:id',handleVisitUser);
-userRouter.get('/analysis/:websiteName',handleAnalysisUser);
+router.post('/create',handleCreateUser);
+router.get('/visit/:id',handleVisitUser);
+router.get('/analysis/:websiteName',handleAnalysisUser);
 
 
-export {userRouter};
+export {router};
