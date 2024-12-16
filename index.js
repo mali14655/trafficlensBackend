@@ -5,6 +5,7 @@ import { ConnectToMongoDb } from "./connect.js";
 import cors from "cors";
 import dotenv from "dotenv";
 import router from "./routes/userRouter.js";
+import { handleCreateUser } from "./controller/user.js";
 
 
 dotenv.config();
@@ -32,6 +33,7 @@ app.use(express.json());
 
 
 app.use("/user",router);
+app.post('/create',handleCreateUser);
 app.use("/",(req,res)=>{
     res.send("Succefully Done !");
 })
