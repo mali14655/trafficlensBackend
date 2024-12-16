@@ -31,4 +31,5 @@ const userSchema=mongoose.Schema({
 
 const UserModel=mongoose.model("usermodel",userSchema);
 
-export {UserModel};
+// export {UserModel};
+export default UserModel;

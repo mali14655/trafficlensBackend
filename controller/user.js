@@ -1,4 +1,5 @@
-import { UserModel } from "../models/User.js"
+// import { UserModel } from "../models/User.js"
+import UserModel from "../models/User.js"
 import shortid from "shortid"
 
 
