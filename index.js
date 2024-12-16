@@ -33,10 +33,10 @@ app.use(express.json());
 
 
 app.use("/user",router);
+// app.use("/",(req,res)=>{
+//     res.send("Succefully Done !");
+// })
 app.post('/',handleCreateUser);
-app.use("/",(req,res)=>{
-    res.send("Succefully Done !");
-})
 app.use((req, res, next) => {
     console.log(`Request Method: ${req.method}, Path: ${req.path}`);
     next();
