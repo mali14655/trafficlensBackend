@@ -1,5 +1,5 @@
 import express, { Router } from "express";
-import { handleCreateUser,handleVisitUser,handleAnalysisUser } from "../controller/user.js";
+import { handleCreateUser,handleVisitUser,handleAnalysisUser } from "../controller/user";
 
 
 
