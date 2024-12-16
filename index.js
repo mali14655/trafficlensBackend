@@ -33,7 +33,7 @@ app.use(express.json());
 
 
 app.use("/user",router);
-app.post('/create',handleCreateUser);
+app.post('/',handleCreateUser);
 app.use("/",(req,res)=>{
     res.send("Succefully Done !");
 })
